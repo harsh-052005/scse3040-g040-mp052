@@ -1,0 +1,36 @@
+data:
+  raw_train: "data/raw/train.csv"
+  raw_later: "data/raw/later.csv"
+  raw_holdout: "data/raw/holdout_features.csv"
+  processed_train: "data/processed/train_clean.csv"
+  processed_later: "data/processed/later_clean.csv"
+  holdout_predictions: "predictions/holdout_predictions.csv"
+
+features:
+  numerical:
+    - age
+    - screen_hours
+    - apps_installed
+    - plan_gb_limit
+    - video_minutes
+    - wifi_hours
+  categorical:
+    - phone_tier
+    - circle
+  target: gb_per_day
+  drop_columns:
+    - record_id
+    - date
+    - gb_from_monthly_bill
+
+train:
+  random_state: 42
+  test_size: 0.2
+  registered_model_name: "mp052_data_usage_predictor"
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "MP052_Mobile_Data_Use"
+
+monitoring:
+  psi_bins: 10
+  retrain_split: 0.70
+  promotion_improvement_threshold: 0.12
