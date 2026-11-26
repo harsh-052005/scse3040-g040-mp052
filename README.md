@@ -12,8 +12,8 @@
 | Enrolment No. | Name | Role |
 | :--- | :--- | :--- |
 | **S24CSEU0766** | HARSH. | Data Lead |
-| **S24CSEU2276** | YashSinghPratap | Model Lead |
-| **S24CSEU0388** | SALONI. | Service Lead |
+| **S24CSEU2276** | YashSinghPratap | Service Lead |
+| **S24CSEU0388** | SALONI. | Model Lead |
 | **S24CSEU0706** | ASHUTOSHSINGHKUMAR | Ops & Monitoring Lead |
 
 ---
