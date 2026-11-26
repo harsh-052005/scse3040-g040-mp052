@@ -34,3 +34,20 @@ monitoring:
   psi_bins: 10
   retrain_split: 0.70
   promotion_improvement_threshold: 0.12
+
+models:
+  - name: ridge
+    type: Ridge
+    params: {alpha: 1.0}
+  - name: random_forest_small
+    type: RandomForestRegressor
+    params: {n_estimators: 100, max_depth: 6}
+  - name: random_forest_large
+    type: RandomForestRegressor
+    params: {n_estimators: 300, max_depth: 12}
+  - name: gradient_boosting
+    type: GradientBoostingRegressor
+    params: {n_estimators: 200, learning_rate: 0.05, max_depth: 3}
+
+paths:
+  model_file: "models/model.joblib"
